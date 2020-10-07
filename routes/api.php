@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ArmorController;
 use App\Http\Controllers\RaceController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\SkillTypeController;
+use App\Http\Controllers\SpecialisationController;
+use App\Http\Controllers\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +38,31 @@ Route::get('/races', [RaceController::class, 'index']);
 Route::get('/races/{id}', [RaceController::class, 'show']);
 Route::post('/races', [RaceController::class, 'store']);
 Route::delete('/races/{id}', [RaceController::class, 'delete']);
+
+/*  JOBS ROUTES */
+
+Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::post('/jobs', [JobController::class, 'store']);
+Route::delete('/jobs/{id}', [JobController::class, 'delete']);
+
+/*  SKILLS TYPES ROUTES */
+
+Route::get('/skills-types', [SkillTypeController::class, 'index']);
+Route::get('/skills-types/{id}', [SkillTypeController::class, 'show']);
+Route::post('/skills-types', [SkillTypeController::class, 'store']);
+Route::delete('/skills-types/{id}', [SkillTypeController::class, 'delete']);
+
+/*  SPECIALISATIONS ROUTES */
+
+Route::get('/specialisations', [SpecialisationController::class, 'index']);
+Route::get('/specialisations/{id}', [SpecialisationController::class, 'show']);
+Route::post('/specialisations', [SpecialisationController::class, 'store']);
+Route::delete('/specialisations/{id}', [SpecialisationController::class, 'delete']);
+
+/*  SKILLS ROUTES */
+
+Route::get('/skills', [SkillController::class, 'index']);
+Route::get('/skills/{id}', [SkillController::class, 'show']);
+Route::post('/skills', [SkillController::class, 'store']);
+Route::delete('/skills/{id}', [SkillController::class, 'delete']);

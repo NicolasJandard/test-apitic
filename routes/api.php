@@ -9,6 +9,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\SkillTypeController;
 use App\Http\Controllers\SpecialisationController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\CharacterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,11 @@ Route::get('/skills', [SkillController::class, 'index']);
 Route::get('/skills/{id}', [SkillController::class, 'show']);
 Route::post('/skills', [SkillController::class, 'store']);
 Route::delete('/skills/{id}', [SkillController::class, 'delete']);
+
+/*  CHARACTERS ROUTES */
+
+Route::get('/characters', [CharacterController::class, 'index']);
+Route::get('/characters/{id}', [CharacterController::class, 'show']);
+Route::post('/characters', [CharacterController::class, 'store']);
+Route::post('/characters/{id}', [CharacterController::class, 'update']);
+Route::delete('/characters/{id}', [CharacterController::class, 'delete']);

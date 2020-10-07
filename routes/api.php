@@ -8,6 +8,7 @@ use App\Http\Controllers\RaceController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\SkillTypeController;
 use App\Http\Controllers\SpecialisationController;
+use App\Http\Controllers\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +59,10 @@ Route::get('/specialisations', [SpecialisationController::class, 'index']);
 Route::get('/specialisations/{id}', [SpecialisationController::class, 'show']);
 Route::post('/specialisations', [SpecialisationController::class, 'store']);
 Route::delete('/specialisations/{id}', [SpecialisationController::class, 'delete']);
+
+/*  SKILLS ROUTES */
+
+Route::get('/skills', [SkillController::class, 'index']);
+Route::get('/skills/{id}', [SkillController::class, 'show']);
+Route::post('/skills', [SkillController::class, 'store']);
+Route::delete('/skills/{id}', [SkillController::class, 'delete']);

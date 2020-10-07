@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Specialisation extends Model
+class Skill extends Model
 {
     protected $fillable = [
-    	'name', 'job_id'
+    	'name', 'spe_id', 'type_id'
     ];
 }

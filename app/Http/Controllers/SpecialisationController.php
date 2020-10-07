@@ -18,7 +18,7 @@ class SpecialisationController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'job_id' => 'required',
+            'job_id' => 'regex:/^[0-9]+$/',
         ]);
 
         $race = Specialisation::create($request->all());

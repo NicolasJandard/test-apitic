@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ArmorController;
 use App\Http\Controllers\RaceController;
+use App\Http\Controllers\JobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,10 @@ Route::get('/races', [RaceController::class, 'index']);
 Route::get('/races/{id}', [RaceController::class, 'show']);
 Route::post('/races', [RaceController::class, 'store']);
 Route::delete('/races/{id}', [RaceController::class, 'delete']);
+
+/*  JOBS ROUTES */
+
+Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::post('/jobs', [JobController::class, 'store']);
+Route::delete('/jobs/{id}', [JobController::class, 'delete']);

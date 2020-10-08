@@ -16,4 +16,24 @@ class Character extends Model
     	'health',
     	'owner'
     ];
+
+    public function job() {
+        return $this->belongsTo('App\Models\Job', 'job_id', 'id');
+    }
+
+    public function race() {
+        return $this->belongsTo('App\Models\Race', 'race_id', 'id');
+    }
+
+    public function specialisation() {
+        return $this->belongsTo('App\Models\Specialisation', 'specialisation_id', 'id');
+    }
+
+    public function skill() {
+        return $this->belongsTo('App\Models\Skill', 'skill_id', 'id');
+    }
+
+    public function armor() {
+        return $this->belongsTo('App\Models\Armor', 'armor_id', 'id');
+    }
 }

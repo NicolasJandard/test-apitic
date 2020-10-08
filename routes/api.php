@@ -30,6 +30,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/armors', [ArmorController::class, 'index']);
 Route::get('/armors/{id}', [ArmorController::class, 'show']);
+Route::get('/armors/characters/{id}', [ArmorController::class, 'showCharacters']);
 Route::post('/armors', [ArmorController::class, 'store']);
 Route::delete('/armors/{id}', [ArmorController::class, 'delete']);
 
@@ -57,7 +58,8 @@ Route::delete('/skills-types/{id}', [SkillTypeController::class, 'delete']);
 /*  SPECIALISATIONS ROUTES */
 
 Route::get('/specialisations', [SpecialisationController::class, 'index']);
-Route::get('/specialisations/{id}', [SpecialisationController::class, 'show']);
+Route::get('/specialisation/{id}', [SpecialisationController::class, 'show']);
+Route::get('/specialisations/{jobId}', [SpecialisationController::class, 'getSpecialisationsFor']);
 Route::post('/specialisations', [SpecialisationController::class, 'store']);
 Route::delete('/specialisations/{id}', [SpecialisationController::class, 'delete']);
 

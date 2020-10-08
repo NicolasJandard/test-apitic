@@ -17,7 +17,7 @@ class Specialisation extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'job_id' => $this->job_id,
+            'job_id' => $this->job->name,
         ];
     }
 }

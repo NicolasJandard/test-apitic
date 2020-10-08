@@ -33,6 +33,10 @@ class SpecialisationController extends Controller
         return new SpecialisationResource(Specialisation::findOrFail($id));
     }
 
+    public function showJobs($id) {
+        return Specialisation::find($id)->job;
+    }
+
     public function delete($id)
     {
         $armor = Specialisation::findOrFail($id);

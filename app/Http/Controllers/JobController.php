@@ -32,6 +32,10 @@ class JobController extends Controller
         return new JobResource(Job::findOrFail($id));
     }
 
+    public function showSpecialisations($id) {
+        return Job::find($id)->specialisations;
+    }
+
     public function delete($id)
     {
         $armor = Job::findOrFail($id);

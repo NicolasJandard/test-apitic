@@ -22,9 +22,9 @@ class SkillController extends Controller
             'type_id' => 'regex:/^[0-9]+$/',
         ]);
 
-        $race = Skill::create($request->all());
+        $skill = Skill::create($request->all());
 
-        return (new SkillResource($race))
+        return (new SkillResource($skill))
             ->response()
             ->setStatusCode(201);
     }
@@ -32,6 +32,14 @@ class SkillController extends Controller
     public function show($id)
     {
         return new SkillResource(Skill::findOrFail($id));
+    }
+
+    public function showSpecialisations($id) {
+        return Skill::find($id)->specialisations;
+    }
+
+    public function showJobs($id) {
+        return Skill::find($id)->jobs;
     }
 
     public function delete($id)

@@ -21,6 +21,7 @@ class Character extends JsonResource
             'job' => $this->job->name,
             'specialisation' => $this->specialisation->name,
             'skill' => $this->skill->name,
+            'skillType' => $this->skill->skillType->name,
             'armor' => $this->armor->name,
             'health' => $this->health,
             'owner' => $this->owner,

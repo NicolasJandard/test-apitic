@@ -45,6 +45,7 @@ Route::delete('/races/{id}', [RaceController::class, 'delete']);
 
 Route::get('/jobs', [JobController::class, 'index']);
 Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::get('/jobs/specialisations/{id}', [JobController::class, 'showSpecialisations']);
 Route::post('/jobs', [JobController::class, 'store']);
 Route::delete('/jobs/{id}', [JobController::class, 'delete']);
 
@@ -59,7 +60,8 @@ Route::delete('/skills-types/{id}', [SkillTypeController::class, 'delete']);
 
 Route::get('/specialisations', [SpecialisationController::class, 'index']);
 Route::get('/specialisation/{id}', [SpecialisationController::class, 'show']);
-Route::get('/specialisations/{jobId}', [SpecialisationController::class, 'getSpecialisationsFor']);
+Route::get('/specialisations/job/{id}', [SpecialisationController::class, 'showJobs']);
+Route::get('/specialisations/skills/{id}', [SpecialisationController::class, 'showSkills']);
 Route::post('/specialisations', [SpecialisationController::class, 'store']);
 Route::delete('/specialisations/{id}', [SpecialisationController::class, 'delete']);
 

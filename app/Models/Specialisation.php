@@ -14,7 +14,7 @@ class Specialisation extends Model
     }
 
     public function skills() {
-        return $this->hasMany('App\Skill', 'spe_id');
+        return $this->hasMany('App\Models\Skill', 'spe_id');
     }
 
     public function characters() {

@@ -36,6 +36,9 @@ class SpecialisationController extends Controller
     public function showJobs($id) {
         return Specialisation::find($id)->job;
     }
+    public function showSkills($id) {
+        return Specialisation::find($id)->skills;
+    }
 
     public function delete($id)
     {

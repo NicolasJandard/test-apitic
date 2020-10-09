@@ -3,7 +3,6 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Models\Job;
 
 class Specialisation extends JsonResource
 {
@@ -18,15 +17,7 @@ class Specialisation extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'job_id' => $this->job_id,
-            //'job' => $this->getJob($this->job_id)
+            'job_id' => $this->job->name,
         ];
     }
-
-    /*public function getJob($requestedId)
-    {
-        $job = Job::select(['name'])->where('id', '=', $requestedId)->first();
-
-        return $job->name;
-    }*/
 }

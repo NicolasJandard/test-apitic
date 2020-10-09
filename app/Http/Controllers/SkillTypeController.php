@@ -32,6 +32,10 @@ class SkillTypeController extends Controller
         return new SkillTypeResource(SkillType::findOrFail($id));
     }
 
+    public function showSkills($id) {
+        return SkillType::find($id)->skills;
+    }
+
     public function delete($id)
     {
         $armor = SkillType::findOrFail($id);
